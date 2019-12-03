@@ -94,7 +94,7 @@ module CouchRest
           if !args.first.is_a?(Hash)
             options[:prefix] = args.shift
           end
-          options.merge(args.last) unless args.empty?
+          options.merge!(args.last) unless args.empty?
           prepare_source_paths(options)
           options
         end
