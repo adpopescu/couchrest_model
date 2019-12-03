@@ -169,7 +169,7 @@ module CouchRest
         # By default, this shouls always be the string representation of the class,
         # but if you need anything special, overwrite this method.
         def model_type_value
-          to_s
+          to_s.downcase
         end
 
         # Raise an error if validation failed.

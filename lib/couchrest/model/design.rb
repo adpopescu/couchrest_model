@@ -19,7 +19,7 @@ module CouchRest
         self.method_name = self.class.method_name(prefix)
         @lock            = Mutex.new
         suffix = prefix ? "_#{prefix}" : ''
-        self["_id"] = "_design/#{model.to_s}#{suffix}"
+        self["_id"] = "_design/#{model.model_type_value}#{suffix}"
         apply_defaults
       end
 
